@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>
+			QuikPik - The Game Changer
+		</title>
+		<link href="canvas.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<canvas id="myCanvas">
+		Your browser does not support HTML5 canvas tag.
+		</canvas>
+		
+		<script>
+		//var c = document.getElementById("myCanvas");
+		//var ctx = c.getContext("2d");
+		/*ctx.moveTo(0,0);
+		ctx.lineTo(200,200);
+		ctx.stroke();*/
+		var canvas = document.getElementById('myCanvas');
+		var context = canvas.getContext('2d');
+		
+		(function(){
+
+			
+			window.addEventListener('resize', resizeCanvas, false);
+			
+			function resizeCanvas(){
+				canvas.width = window.innerWidth - 23;
+				canvas.height = window.innerHeight - 22;
+				
+				/* drawings go here
+				*/
+				drawStuff();
+				drawCircle();
+			}
+			resizeCanvas();
+			
+			function drawStuff() {
+				//draw here
+				context.moveTo(0,0);
+				context.lineTo(window.innerWidth - 23, window.innerHeight - 22);
+				context.stroke();
+				
+				/*context.beginPath();
+				context.arc(95,50,40,0,2*Math.PI);
+				context.strike();*/
+			}
+			
+			function drawCircle() {
+				context.beginPath();
+				context.arc(95,50,40,0,2*Math.PI);
+				context.stroke();
+			}
+		})();
+		</script>
+	</body>
+</html>

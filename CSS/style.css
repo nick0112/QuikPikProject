@@ -1,0 +1,171 @@
+/*Importing custom font */
+@font-face {
+	font-family: 'myFont';
+	src: url('roundsblack.otf');
+}
+
+html, body {
+	width: auto;
+	height: auto;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+canvas {
+  /*background: #9AEEFF;*/
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  border: 1px solid #000000;
+	margin-left: 1px;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+#text{
+	width:100%;
+}
+
+form {
+  position: relative;
+  text-align: center;
+  margin-left: 36px;
+}
+
+#Name {
+  width: 150px;
+  height: 40px;
+  background-color: #ffffff;
+  border-color: #000000;
+  font-size: 15px;
+}
+input[type=text]{
+	position:relative;
+	display:block;
+	margin:auto;
+  border-radius: 4px;
+}
+
+.form {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+
+input[type=image] {
+  position: relative;
+  display: block;
+}
+#userinput{
+	width:150px;
+	height:40px;
+	background-color:#ffffff;
+	border-color:#000000;
+	font-size:15px;
+}
+#mycanvas {
+	width: 100%;
+	height: 100%;
+  	-webkit-tap-highlight-color:rgba(0,0,0,0);
+
+}
+
+div span#text {
+  position   : absolute;
+  top        : 185px;
+}
+
+div span#counter { 
+    position   : absolute; 
+    top        : 14px;
+    left      : 20px;
+    display    : block; 
+    width      : 100%;
+    color      : red;
+    font       : 27px myFont;
+}
+
+/*Overlay background */
+.overlay {
+	height: 0%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,1);
+	overflow-x: hidden;
+	overflow-y: hidden;
+	transition: 0.5s;
+}
+
+/* Formatting the overlay content */
+.overlay_content { 
+	position: relative;
+	top: 15%;
+	height: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+
+/* Formatting navigation links */
+.overlay a {
+	margin-left: auto;
+	margin-right: auto;
+	width: 180px;
+	padding: 8px;
+	text-decoration: none;
+	font-size: 36px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+	font-family: Arial;
+}
+
+/* Formatting for options heading text */
+.overlay h3{
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	color: #818181;
+	margin-bottom: 0px;
+	margin-top: 2px;
+	font-family: 'myFont';
+}
+	
+	#optionBanner {
+		width: 250px;
+		height: 60px;
+	}
+	
+	#optionButton {
+		width: 150px;
+		height: 90px;
+	}
+	
+	#muteButton {
+		width: 150px;
+		height: 90px;
+	}
+
+
+@media screen and (min-width: 500px) {
+	/*Formatting for options banner */
+	#optionBanner {
+		width: 400px;
+		height: 80px;
+	}
+
+	/*Formatting for buttons on option screen aside from mute */
+	#optionButton {
+		width: 150px;
+		height: 100px;
+	}
+
+	/*Formatting for mute button on option screen */
+	#muteButton {
+		width: 150px;
+		height: 100px;
+	}
+}
+
